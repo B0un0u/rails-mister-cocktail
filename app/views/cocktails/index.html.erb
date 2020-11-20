@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <a class="navbar-brand" href="#">
-    <h2> BAR chez Bibi </h2> 
+    <h4> BAR chez Bibi </h4> 
 </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -15,9 +15,11 @@
 </div>
 
 <div class="banner" style="height: 1000px; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
- 
+   <div class="container">
+ <h1>Welcome to chez Bibi!</h1>
+    <p>The best cocktails in town.</p>
+      </div>
   <div class="container">
-
  <div class="cards">
  <% @cocktails.each do |cocktail| %>
  <%= link_to  cocktail_path(cocktail) do %>
