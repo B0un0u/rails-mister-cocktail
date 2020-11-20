@@ -1,7 +1,37 @@
-<h1>My cocktails</h1>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <a class="navbar-brand" href="#">
+    <h2> BAR chez Bibi </h2> 
+</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to('➕ Add a new cocktail', new_cocktail_path, class: "btn btn-dark") %>
+      </li>
+    </ul>
+  </div>
+</div>
 
-<% @cocktails.each do |cocktail| %>
-<h4><%= link_to(cocktail.name, cocktail_path(cocktail)) %></h4>
-<% end %>
-<br> 
-<%= link_to('➕ Add a new cocktail', new_cocktail_path, class: "btn btn-primary") %>
+<div class="banner" style="height: 1000px; background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
+ 
+  <div class="container">
+
+ <div class="cards">
+ <% @cocktails.each do |cocktail| %>
+ <%= link_to  cocktail_path(cocktail) do %>
+  <div class="card-category mt-5" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/613037/pexels-photo-613037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
+  <h4><%= cocktail.name %></h4>
+  </div>
+  <% end %>
+  <% end %>
+  <br>   
+    
+</div>
+  
+
+    
+  </div>
+</div>
+
